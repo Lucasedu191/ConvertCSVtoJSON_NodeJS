@@ -6,22 +6,6 @@ const moment = require('moment');
 var fs = require('fs');
 
 
-/* ConverterCsvParaJson(){
-    const continua = setInterval() ->{
-        if(Queue.filaCSV.length ===0){
-            console.log('Tamanho filaCSV: ', Queue.filaCSV.length)
-            if(Queue.terminouProcessoCSV){
-                clearInterval(continua)
-            }
-        }else{
-            console.log('Queue: ', Queue.filaCSV.length)
-            const csv = Queue.filaCSV.shift()
-            const data = Papa.parse(csv)
-            Queue.filaJSON.push(data)
-        }
-    }, 0)
-}
- */
 
 function ConverterCsvParaJson(fileContent) {
     const promise = new Promise( (resolve, reject) => { 
@@ -42,3 +26,19 @@ function ConverterCsvParaJson(fileContent) {
 }
 
 module.exports = ConverterCsvParaJson
+    /* ConverterCsvParaJson(){
+        const continua = setInterval() ->{
+            if(Queue.filaCSV.length ===0){
+                console.log('Tamanho filaCSV: ', Queue.filaCSV.length)
+                if(Queue.terminouProcessoCSV){
+                    clearInterval(continua)
+                }
+            }else{
+                console.log('Queue: ', Queue.filaCSV.length)
+                const csv = Queue.filaCSV.shift()
+                const data = Papa.parse(csv)
+                Queue.filaJSON.push(data)
+            }
+        }, 0)
+    }
+     */
